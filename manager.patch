@@ -1,0 +1,28 @@
+---
+ www/manager6/sdn/VnetEdit.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/www/manager6/sdn/VnetEdit.js b/www/manager6/sdn/VnetEdit.js
+index cdd83ed4..a00f83e6 100644
+--- a/www/manager6/sdn/VnetEdit.js
++++ b/www/manager6/sdn/VnetEdit.js
+@@ -52,6 +52,18 @@ Ext.define('PVE.sdn.VnetInputPanel', {
+ 		deleteEmpty: "{!isCreate}",
+ 	    },
+ 	},
++    ],
++    advancedItems: [
++	{
++	    xtype: 'proxmoxcheckbox',
++	    name: 'ports-isolation',
++	    uncheckedValue: null,
++	    checked: false,
++	    fieldLabel: gettext('Ports Isolation'),
++	    cbind: {
++		deleteEmpty: "{!isCreate}",
++	    },
++	},
+ 	{
+ 	    xtype: 'proxmoxcheckbox',
+ 	    name: 'vlanaware',
+-- 
