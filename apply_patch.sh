@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Install needed files 
+apt update
+apt install patch 
+
 # Backup the original files that we are patching. 
 mkdir /root/patch-backup
 cp /root/pve-manager/
