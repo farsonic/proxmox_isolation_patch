@@ -7,7 +7,7 @@ apt-get update && apt-get install -y patch
 mkdir /root/patch-backup
 cp /usr/share/pve-manager/js/pvemanagerlib.js /root/patch-backup/
 cp /usr/share/perl5/PVE/Network/SDN/VnetPlugin.pm /root/patch-backup/
-cp /usr/share/perl5/PVE/Network/SDN/Zones.pm /root/patch-backup/
+cp /usr/share/perl5/PVE/Network/SDN/Zones/Plugin.pm /root/patch-backup/
 cp /usr/share/perl5/PVE/Network.pm /root/patch-backup/
 
 # Copy the patch files to the respective directories
