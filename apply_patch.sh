@@ -1,15 +1,14 @@
 #!/bin/bash
 
 # Directories where the patches will be copied
-MANAGER_DIR="/root/pve-manager"
-NETWORK_DIR="/root/pve-network"
-COMMON_DIR="/root/pve-common"
+MANAGER_DIR="/root/pve-manager/"
+NETWORK_DIR="/root/pve-network/"
+COMMON_DIR="/root/pve-common/"
 
 # Patch file names in the current directory
 MANAGER_PATCH_FILE="manager.patch"
 NETWORK_PATCH_FILE="network.patch"
 COMMON_PATCH_FILE="common.patch"
-
 
 # Copy the patch files to the respective directories
 cp $MANAGER_PATCH_FILE $MANAGER_DIR/
@@ -26,7 +25,8 @@ prompt_to_patch() {
     case "$choice" in
         y|Y )
             echo "Applying $PATCH_NAME patch..."
-            if patch -p1 -d $PATCH_DIR < $PATCH_DIR/$PATCH_FILE; then
+            (cd $PATCH_DIR && patch -p1 < $PATCH_FILE)
+            if [ $? -eq 0 ]; then
                 echo "$PATCH_NAME patch applied successfully."
             else
                 echo "Failed to apply $PATCH_NAME patch."
