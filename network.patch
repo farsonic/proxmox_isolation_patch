@@ -1,8 +1,3 @@
----
- src/PVE/Network/SDN/VnetPlugin.pm   | 5 +++++
- src/PVE/Network/SDN/Zones/Plugin.pm | 1 +
- 2 files changed, 6 insertions(+)
-
 diff --git a/src/PVE/Network/SDN/VnetPlugin.pm b/src/PVE/Network/SDN/VnetPlugin.pm
 index 062904c..58e177b 100644
 --- a/src/PVE/Network/SDN/VnetPlugin.pm
@@ -25,17 +20,3 @@ index 062904c..58e177b 100644
 +	'ports-isolation' => { optional => 1 },
      };
  }
- 
-diff --git a/src/PVE/Network/SDN/Zones/Plugin.pm b/src/PVE/Network/SDN/Zones/Plugin.pm
-index 26cc0da..dce7e57 100644
---- a/src/PVE/Network/SDN/Zones/Plugin.pm
-+++ b/src/PVE/Network/SDN/Zones/Plugin.pm
-@@ -236,6 +236,7 @@ sub tap_plug {
- 
-     my $opts = {};
-     $opts->{learning} = 0 if $plugin_config->{'bridge-disable-mac-learning'};
-+    $opts->{isolation} = 1 if $vnet->{'ports-isolation'};
-     PVE::Network::tap_plug($iface, $vnetid, $tag, $firewall, $trunks, $rate, $opts);
- }
- 
--- 
