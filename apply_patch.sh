@@ -11,8 +11,8 @@ cp /root/pve-manager/
 
 
 # Directories where the patches will be copied
-MANAGER_DIR="/usr/share/pve-manager/js/"
-NETWORK_DIR="/usr/share/perl5/PVE/Network/SDN/"
+MANAGER_DIR="/usr/share/pve-manager/js"
+NETWORK_DIR="/usr/share/perl5/PVE/Network/SDN"
 ZONE_DIR="/usr/share/perl5/PVE/Network/SDN/"
 COMMON_DIR="/usr/share/perl5/PVE/"
 
@@ -23,10 +23,10 @@ ZONE_PATCH_FILE="zone.patch"
 COMMON_PATCH_FILE="common.patch"
 
 # Copy the patch files to the respective directories
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/common.patch -o $COMMON_DIR
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/network.patch -o $NETWORK_DIR
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/zone.patch -o $ZONE_DIR
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/manager.patch -o $MANAGER_DIR
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/common.patch -o ${COMMON_DIR}/${COMMON_PATCH_FILE}
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/network.patch -o ${NETWORK_DIR}/${NETWORK_PATCH_FILE}
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/zone.patch -o ${ZONE_DIR}/${ZONE_PATCH_FILE}
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/manager.patch -o ${MANAGER_DIR}/${MANAGER_PATCH_FILE}
 
 
 # Function to prompt for confirmation
