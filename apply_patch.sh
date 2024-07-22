@@ -19,6 +19,7 @@ COMMON_DIR="/usr/share/perl5/PVE/"
 # Patch file names in the current directory
 MANAGER_PATCH_FILE="manager.patch"
 NETWORK_PATCH_FILE="network.patch"
+ZONE_PATCH_FILE="zone.patch"
 COMMON_PATCH_FILE="common.patch"
 
 # Copy the patch files to the respective directories
