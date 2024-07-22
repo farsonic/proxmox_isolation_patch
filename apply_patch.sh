@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Backup the original files that we are patching. 
+mkdir /root/patch-backup
+cp /root/pve-manager/
+
+
+
 # Directories where the patches will be copied
 MANAGER_DIR="/root/pve-manager/"
 NETWORK_DIR="/root/pve-network/"
@@ -11,9 +17,10 @@ NETWORK_PATCH_FILE="network.patch"
 COMMON_PATCH_FILE="common.patch"
 
 # Copy the patch files to the respective directories
-cp $MANAGER_PATCH_FILE $MANAGER_DIR/
-cp $NETWORK_PATCH_FILE $NETWORK_DIR/
-cp $COMMON_PATCH_FILE $COMMON_DIR/
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/common.patch -o $COMMON_DIR
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/network.patch -o $NETWORK_DIR
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/manager.patch -o $MANAGER_DIR
+
 
 # Function to prompt for confirmation
 prompt_to_patch() {
