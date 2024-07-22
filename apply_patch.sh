@@ -11,9 +11,10 @@ cp /root/pve-manager/
 
 
 # Directories where the patches will be copied
-MANAGER_DIR="/root/pve-manager/"
-NETWORK_DIR="/root/pve-network/"
-COMMON_DIR="/root/pve-common/"
+MANAGER_DIR="/usr/share/pve-manager/js/"
+NETWORK_DIR="/usr/share/perl5/PVE/Network/SDN/"
+ZONE_DIR="/usr/share/perl5/PVE/Network/SDN/"
+COMMON_DIR="/usr/share/perl5/PVE/"
 
 # Patch file names in the current directory
 MANAGER_PATCH_FILE="manager.patch"
