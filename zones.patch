@@ -1,0 +1,13 @@
+#/usr/share/perl5/PVE/Network/SDN/VnetPlugin.pm
+
+diff --git a/src/PVE/Network/SDN/Zones/Plugin.pm b/src/PVE/Network/SDN/Zones/Plugin.pm
+index 26cc0da..dce7e57 100644
+--- a/src/PVE/Network/SDN/Zones/Plugin.pm
++++ b/src/PVE/Network/SDN/Zones/Plugin.pm
+@@ -236,6 +236,7 @@ sub tap_plug {
+ 
+     my $opts = {};
+     $opts->{learning} = 0 if $plugin_config->{'bridge-disable-mac-learning'};
++    $opts->{isolation} = 1 if $vnet->{'ports-isolation'};
+     PVE::Network::tap_plug($iface, $vnetid, $tag, $firewall, $trunks, $rate, $opts);
+ }
