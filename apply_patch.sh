@@ -23,3 +23,9 @@ patch -p1 /usr/share/perl5/PVE/Network/SDN/Zones/Plugin.pm /var/tmp/Plugin.patch
 patch -p1 /usr/share/perl5/PVE/Network.pm /var/tmp/Network.patch
 
 echo "Script execution completed."
+
+
+#cp /root/patch-backup/pvemanagerlib.js /usr/share/pve-manager/js/
+#cp /root/patch-backup/VnetPlugin.pm /usr/share/perl5/PVE/Network/SDN/
+#cp /root/patch-backup/Zones.pm /usr/share/perl5/PVE/Network/SDN/
+#cp /root/patch-backup/Network.pm /usr/share/perl5/PVE/
