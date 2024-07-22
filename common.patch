@@ -1,7 +1,3 @@
----
- src/PVE/Network.pm | 14 ++++++++++++--
- 1 file changed, 12 insertions(+), 2 deletions(-)
-
 diff --git a/src/PVE/Network.pm b/src/PVE/Network.pm
 index a4f5ba9..6654ea1 100644
 --- a/src/PVE/Network.pm
