@@ -9,4 +9,3 @@ index 26cc0da..dce7e57 100644
 +    $opts->{isolation} = 1 if $vnet->{'ports-isolation'};
      PVE::Network::tap_plug($iface, $vnetid, $tag, $firewall, $trunks, $rate, $opts);
  }
---
