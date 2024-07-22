@@ -27,5 +27,5 @@ echo "Script execution completed."
 
 #cp /root/patch-backup/pvemanagerlib.js /usr/share/pve-manager/js/
 #cp /root/patch-backup/VnetPlugin.pm /usr/share/perl5/PVE/Network/SDN/
-#cp /root/patch-backup/Zones.pm /usr/share/perl5/PVE/Network/SDN/
+#cp /root/patch-backup/Plugin.pm /usr/share/perl5/PVE/Network/SDN/Zones/
 #cp /root/patch-backup/Network.pm /usr/share/perl5/PVE/
