@@ -19,7 +19,7 @@ curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/
 #Patch each file
 patch -p1 /usr/share/pve-manager/js/pvemanagerlib.js /var/tmp/manager.patch
 patch -p1 /usr/share/perl5/PVE/Network/SDN/VnetPlugin.pm /var/tmp/network.patch
-patch -p1 /usr/share/perl5/PVE/Network/SDN/Zones.pm /var/tmp/zones.patch
+patch -p1 /usr/share/perl5/PVE/Network/SDN/Zones/Plugin.pm /var/tmp/zones.patch
 patch -p1 /usr/share/perl5/PVE/Network.pm /var/tmp/common.patch
 
 echo "Script execution completed."
