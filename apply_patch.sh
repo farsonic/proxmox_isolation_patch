@@ -10,10 +10,6 @@ MANAGER_PATCH_FILE="manager.patch"
 NETWORK_PATCH_FILE="network.patch"
 COMMON_PATCH_FILE="common.patch"
 
-# Create directories if they do not exist
-mkdir -p $MANAGER_DIR
-mkdir -p $NETWORK_DIR
-mkdir -p $COMMON_DIR
 
 # Copy the patch files to the respective directories
 cp $MANAGER_PATCH_FILE $MANAGER_DIR/
