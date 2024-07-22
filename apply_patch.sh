@@ -11,10 +11,10 @@ cp /usr/share/perl5/PVE/Network/SDN/Zones.pm /root/patch-backup/
 cp /usr/share/perl5/PVE/Network.pm /root/patch-backup/
 
 # Copy the patch files to the respective directories
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/manager.patch -o /var/tmp/pvemanagerlib.patch
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/network.patch -o /var/tmp/VnetPlugin.patch
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/zones.patch -o /var/tmp/Plugin.patch
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/common.patch -o /var/tmp/Network.patch
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/pvemanagerlib.patch -o /var/tmp/pvemanagerlib.patch
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/VnetPlugin.patch -o /var/tmp/VnetPlugin.patch
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/Plugin.patch -o /var/tmp/Plugin.patch
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/Network.patch -o /var/tmp/Network.patch
 
 #Patch each file
 patch -p1 /usr/share/pve-manager/js/pvemanagerlib.js /var/tmp/pvemanagerlib.patch
