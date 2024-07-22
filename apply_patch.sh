@@ -25,7 +25,7 @@ COMMON_PATCH_FILE="common.patch"
 # Copy the patch files to the respective directories
 curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/common.patch -o ${COMMON_DIR}/${COMMON_PATCH_FILE}
 curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/network.patch -o ${NETWORK_DIR}/${NETWORK_PATCH_FILE}
-curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/zone.patch -o ${ZONE_DIR}/${ZONE_PATCH_FILE}
+curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/zones.patch -o ${ZONE_DIR}/${ZONE_PATCH_FILE}
 curl -k https://raw.githubusercontent.com/farsonic/proxmox_isolation_patch/main/manager.patch -o ${MANAGER_DIR}/${MANAGER_PATCH_FILE}
 
 
