@@ -22,6 +22,12 @@ patch -p1 /usr/share/perl5/PVE/Network/SDN/VnetPlugin.pm /var/tmp/VnetPlugin.pat
 patch -p1 /usr/share/perl5/PVE/Network/SDN/Zones/Plugin.pm /var/tmp/Plugin.patch
 patch -p1 /usr/share/perl5/PVE/Network.pm /var/tmp/Network.patch
 
+md5sum /usr/share/pve-manager/js/pvemanagerlib.js
+md5sum /usr/share/perl5/PVE/Network/SDN/VnetPlugin.pm
+md5sum /usr/share/perl5/PVE/Network/SDN/Zones/Plugin.pm 
+md5sum /usr/share/perl5/PVE/Network.pm
+
+
 echo "Script execution completed."
 
 
