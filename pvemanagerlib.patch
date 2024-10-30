@@ -6,8 +6,6 @@ index cdd83ed4..a00f83e6 100644
  		deleteEmpty: "{!isCreate}",
  	    },
  	},
-+    ],
-+    advancedItems: [
 +	{
 +	    xtype: 'proxmoxcheckbox',
 +	    name: 'ports-isolation',
