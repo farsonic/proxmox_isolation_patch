@@ -1,4 +1,4 @@
-*** This code and its need/function are now deprecated. All patch functionality has now been incorporated into PVE 8.3 ***
+** This code and its need/function are now deprecated. All patch functionality has now been incorporated into PVE 8.3 **
 
 This is the patch provided by the Proxmox Dev team and I've placed it here with a quick script to install this into a current working system, followed by a reboot or restart of the services on the host. 
 
